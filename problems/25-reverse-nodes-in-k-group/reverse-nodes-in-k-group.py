@@ -10,6 +10,21 @@ class Solution(object):
             if not curr:
                 return head
             curr=curr.next
+        l=None
+        curr=head
+        for i in range(k):
+            nn=curr.next
+            curr.next=l
+            l=curr
+            curr=nn
+        head.next=self.reverseKGroup(curr, k)
+        return l
+
+        '''curr=head
+        for i in range(k):
+            if not curr:
+                return head
+            curr=curr.next
         prev = None
         curr = head
         for _ in range(k):
@@ -18,7 +33,7 @@ class Solution(object):
             prev = curr
             curr = nxt
         head.next = self.reverseKGroup(curr, k)
-        return prev
+        return prev'''
 
 
         
