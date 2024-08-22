@@ -20,20 +20,7 @@ class Solution(object):
         head.next=self.reverseKGroup(curr, k)
         return l
 
-        '''curr=head
-        for i in range(k):
-            if not curr:
-                return head
-            curr=curr.next
-        prev = None
-        curr = head
-        for _ in range(k):
-            nxt = curr.next
-            curr.next = prev
-            prev = curr
-            curr = nxt
-        head.next = self.reverseKGroup(curr, k)
-        return prev'''
+        
 
 
         
